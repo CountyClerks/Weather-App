@@ -1,0 +1,41 @@
+body{ 
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.left-content, .right-content {
+    color: white;
+    border-radius: 30px;
+}
+
+.left-content {
+    background: linear-gradient(#88EBEF, #535BE6);
+    display: inherit;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+}
+
+.right-content {
+    background-color: #222831;
+    display: inherit;
+    flex-direction: column;
+}
+
+.right-header{
+    display: inherit;
+    flex-direction: column;
+}
+
+#precipitation, #humidity, #wind {
+    display:inherit;
+}

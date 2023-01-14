@@ -4,13 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/style.css">
     <title>Weather App</title>
 </head>
 <body>
-    <form>
+    <div class="content">
+        <div class="left-content">
+            <div class="left-header">
+                <h2>Tuesday</h2>
+                <h3>20 Jun 2022</h3>
+                <h3>Biarritz, FR</h3>
+            </div>
+            <div class="left-footer">
+                <h2>29 Degrees C</h2>
+                <h3>Sunny</h3>
+            </div>
+        </div>
+        <div class="right-content">
+            <div class="right-header">
+                <div id="precipiation">
+                    <h2>Precipitation</h2>
+                    <h2>0%</h2>
+                </div>
+                <div id="humidity">
+                    <h2>Humidity</h2>
+                    <h2>42%</h2>
+                </div>
+                <div id="wind">
+                    <h2>Wind</h2>
+                    <h2>3 km/h</h2>
+                </div>
+            </div>
+            <dliv class="right-footer">
+                <button type="button" class="change-location">Search Location</button>
+            </dliv>
+        </div>
+    </div>
+    <!-- <form>
         <input type="text" placeholder="Search Location..." name="search">
         <button type="button">Search</button>
-    </form>
+    </form> -->
     <script src="bundle.js"></script>
 </body>
 </html>
