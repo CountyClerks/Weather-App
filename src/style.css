@@ -28,6 +28,8 @@ body{
     border-radius: 1.5em;
 }
 .left-content {
+    position: relative;
+    z-index: 9;
     background-image: linear-gradient(rgba(136, 235, 239, .75), rgba(83, 91, 230, .75)), url(./sunny.avif);
     background-size: contain;
     display: inherit;
@@ -62,7 +64,6 @@ body{
 .right-content {
     position: relative;
     left: -100px;
-    z-index: -1;
     background-color: #222831;
     display: inherit;
     flex-direction: column;
@@ -79,9 +80,15 @@ body{
 .right-footer {
     margin-left: 7.5rem;
 }
+input[type="text"] {
+    border-radius: 0.625rem;
+    width: 10rem;
+    height: 1.75rem;
+    text-align: center;
+}
 .change-location {
-    width: 371px;
-    height: 47px;
+    width: 125px;
+    height: 2.063rem;
     border-radius: 0.625rem;
     border: none;
     background: linear-gradient(#88EBEF, #535BE6);
@@ -89,6 +96,12 @@ body{
     margin-left: 1rem;
     margin-right: 1rem;
     font-weight: 500;
+    
+}
+.change-location:hover {
+    cursor: pointer;
+    background: linear-gradient(#535BE6, #88EBEF)
+
 }
 #precipitation, #humidity, #wind {
     display:inherit;
