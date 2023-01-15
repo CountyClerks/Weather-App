@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 body{ 
+    font-family: 'Montserrat';
     background-color: black;
     margin: 0;
     padding: 0;
@@ -19,23 +21,51 @@ body{
     display: inherit;
     flex-direction: column;
     justify-content: space-around;
-    padding-top: 30px;
+    width: 441px;
+    height: 596px;
+    /* padding-top: 75px;
     padding-left: 50px;
-    padding-right: 30px;
-    padding-bottom: 50px;
+    padding-right: 75px;
+    padding-bottom: 50px; */
+    /* height: 300px; */
 }
 
 .right-content {
+    position: relative;
+    left: -100px;
+    z-index: -1;
     background-color: #222831;
     display: inherit;
     flex-direction: column;
+    justify-content: space-around;
+    width: 550px;
+    height: 557px;
 }
 
 .right-header{
     display: inherit;
     flex-direction: column;
+    margin-left: 120px;
+    margin-top: 30px;
+}
+.right-footer {
+    margin-left: 120px;
+}
+
+.change-location {
+    width: 371px;
+    height: 47px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(#88EBEF, #535BE6);
+    color: white;
+    margin-left: 16px;
+    margin-right: 16px;
 }
 
 #precipitation, #humidity, #wind {
     display:inherit;
+    justify-content: space-between;
+    margin-right: 25px;
+    margin-left: 25px;
 }
