@@ -1,6 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-body{ 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+
+/* General and Shared Content Selectors*/
+
+* {
     font-family: 'Montserrat';
+}
+body{ 
     background-color: black;
     margin: 0;
     padding: 0;
@@ -11,25 +17,48 @@ body{
     justify-content: center;
     height: 100vh;
 }
+.left-header > h3, #precipitation > h2:nth-child(2), #humidity > h2:nth-child(2), #wind > h2:nth-child(2) {
+    font-weight: 400;
+}
+
+
+/* Left Card Content Selectors */
 .left-content, .right-content {
     color: white;
-    border-radius: 30px;
+    border-radius: 1.5em;
 }
-
 .left-content {
-    background: linear-gradient(#88EBEF, #535BE6);
+    background-image: linear-gradient(rgba(136, 235, 239, .75), rgba(83, 91, 230, .75)), url(./sunny.avif);
+    background-size: contain;
     display: inherit;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 441px;
     height: 596px;
-    /* padding-top: 75px;
-    padding-left: 50px;
-    padding-right: 75px;
-    padding-bottom: 50px; */
-    /* height: 300px; */
+}
+.left-header, .left-footer {
+    margin-left: 2em;
+    margin-top: 1.25em;
+}
+.left-header > h2 {
+    font-size: 2rem;
+    margin-bottom: -5px;
+}
+.left-footer {
+    display: inherit;
+    flex-direction: column;
+    margin-bottom: 35px;
+}
+.left-footer > h2:nth-child(1) {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+.left-footer > h2:nth-child(2) {
+    font-size: 1.75rem;
 }
 
+
+/* Right Card Content Selectors */
 .right-content {
     position: relative;
     left: -100px;
@@ -41,31 +70,29 @@ body{
     width: 550px;
     height: 557px;
 }
-
 .right-header{
     display: inherit;
     flex-direction: column;
-    margin-left: 120px;
-    margin-top: 30px;
+    margin-left: 7.5rem;
+    margin-top: 1.875rem;
 }
 .right-footer {
-    margin-left: 120px;
+    margin-left: 7.5rem;
 }
-
 .change-location {
     width: 371px;
     height: 47px;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     border: none;
     background: linear-gradient(#88EBEF, #535BE6);
     color: white;
-    margin-left: 16px;
-    margin-right: 16px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-weight: 500;
 }
-
 #precipitation, #humidity, #wind {
     display:inherit;
     justify-content: space-between;
-    margin-right: 25px;
-    margin-left: 25px;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
 }
