@@ -1,16 +1,42 @@
-let location = document.querySelector('input[name="search"]');
+import { get } from "lodash";
 
-const getWeatherData = async function () {
-    const weatherToday = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location.value}&appid=${API_KEY}&units=metric`);
-    const dataToday = await weatherToday.json();
-    console.log(dataToday);
+const API_KEY = 'c7dd5531253eb3d7d8f017a306484476';
 
-    const futureWeather = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${location.value}&appid=${API_KEY}&units=metric`);
-    const dataFuture = await futureWeather.json();
-    console.log(dataFuture);
+const getWeatherURL = function (location) {
+    return `https://api.openweathermap.org/data/2.5/weather?q=${location.value}&appid=${API_KEY}&units=metric`;
 }
 
+const getWeatherData = async function (url) {
+
+    let weatherData = {};
+
+    try {
+        const response = await fetch(url);
+        const dataToday =  await response.json();
+
+        weatherData.locationCity = dataToday.name;
+        weatherData.locationCountry = dataToday.sys.country;
+        weatherData.clouds = dataToday.weather[0].main;
+        weatherData.windspeed = Math.round((dataToday.wind.speed* 3.6) * 10) /10;
+        weatherData.temp = Math.round(dataToday.main.temp * 10) /10;
+        weatherData.humidity = dataToday.main.humidity;
+    
+        return weatherData;
+
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+const getWeather = async function(location) {
+
+    let forcastURL = getWeatherURL(location);
+    let forcast = await getWeatherData(forcastURL);
+    return {forcastURL, forcast};
+}
 
 export {
-    getWeatherData
+    getWeatherURL,
+    getWeatherData,
+    getWeather
 }

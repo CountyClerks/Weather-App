@@ -78,7 +78,7 @@ body{
     margin-top: 1.875rem;
 }
 .right-footer {
-    margin-left: 7.5rem;
+    margin-left: 10rem;
 }
 input[type="text"] {
     border-radius: 0.625rem;
@@ -103,7 +103,7 @@ input[type="text"] {
     background: linear-gradient(#535BE6, #88EBEF)
 
 }
-#precipitation, #humidity, #wind {
+#humidity, #wind {
     display:inherit;
     justify-content: space-between;
     margin-right: 1.5rem;
