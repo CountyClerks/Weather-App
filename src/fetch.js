@@ -2,13 +2,15 @@ import { get } from "lodash";
 
 const API_KEY = 'c7dd5531253eb3d7d8f017a306484476';
 
+//API can be called with imperial units by replacing '&units=metric' with '&units=imperial'
 const getWeatherURL = function (location) {
     return `https://api.openweathermap.org/data/2.5/weather?q=${location.value}&appid=${API_KEY}&units=metric`;
 }
 
+//Assign data from the API into an array accessed inside 'weather.js'
 const getWeatherData = async function (url) {
 
-    let weatherData = {};
+    let weatherData = [];
 
     try {
         const response = await fetch(url);

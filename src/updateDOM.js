@@ -1,5 +1,6 @@
 import {format, getDate} from 'date-fns';
 
+//Formatting for date
 let date = new Date();
 let currentDate = getDate(date);
 let currentDay = format(date, 'EEEE');
@@ -16,6 +17,7 @@ let cloudCover = document.querySelector('#cloud-cover');
 let humidityPercent = document.querySelector('#humidity-percent');
 let windSpeed = document.querySelector('#wind-speed');
 
+//Push information to the page
 todayDate.innerText = `${currentDate} ${currentMonth} ${currentYear}`;
 weekDay.innerText = currentDay;
 
